@@ -1,0 +1,135 @@
+body{
+    background-color:rgb(20,36,60,1);
+    height: 100%;
+    width: 100%;
+}
+
+.heading
+{
+    color:white;
+}
+
+.text_box
+{
+    background-color:blue;
+}
+
+.modal
+{
+    display:flex;
+    position: fixed;
+    background-color: rgb(17, 24, 39, 39);
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    overflow: auto;
+    z-index: 1000;;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.content
+{
+    display:flex;
+    justify-content: center;
+}
+.video
+{
+    width:80%;
+}
+
+.exit
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(20,36,60);
+    color:rgb(255, 255, 255); 
+    display: flex;
+    border-radius: 50%; 
+    cursor: pointer; 
+    z-index: 10;
+}
+
+.exit:hover
+{
+    background-color:rgba(20,36,60,0.26) ;
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.x 
+{
+    font-size: 20px;
+}
+
+.modal2
+{
+    display:flex;
+    position:fixed;
+    background-color: rgb(0, 0, 0);
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    overflow: auto;
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.howTo
+{
+    display: flex;
+    background-color:rgba(20,36,60,1);
+    height: 100%;
+    width: 40%;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.start
+{
+    width:500px;
+    height:100px;
+    background-color:yellow;
+}
+
+.game 
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.heading
+{
+    display:flex;
+    justify-content: center;
+    color:white;
+    align-items: center;
+}
+
+.scoreBoard
+{
+    background-color: red;
+    display: flex;
+    color:white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choices
+{
+    display: flex;
+    justify-content: center;
+}
