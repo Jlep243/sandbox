@@ -45,9 +45,7 @@ function game()
    rock.style.alignItems = 'center';
    rock.style.backgroundColor = "#1b1b1b";
    rock.style.color = "white";
-   rock.style.width = "200px";
-   rock.style.height = "100px";
-   rock.style.border = '2px';
+   rock.style.width = "10%";
 
    let paper = document.createElement('p');
    choices.appendChild(paper);
@@ -57,9 +55,9 @@ function game()
    paper.textContent = "Paper";
    paper.style.backgroundColor = "white";
    paper.style.color = "black";
-   paper.style.width = "200px";
+   paper.style.width = "10%";
    paper.style.height = "100px";
-   paper.style.border = '2px';
+  
 
    let scissors = document.createElement('p');
    choices.appendChild(scissors);
@@ -69,34 +67,41 @@ function game()
    scissors.textContent = "Scissors";
    scissors.style.backgroundColor = "grey";
    scissors.style.color = "white";
-   scissors.style.width = "200px";
+   scissors.style.width = "10%";
    scissors.style.height = "100px";
-   scissors.style.border = "2px"; 
+   
 
    let playerChoice;
    
+   const Eagle500KG = ["w", "d", "s", "s", "s" ];
 
-   playerChoice = body.addEventListener('keydown', function(number){
-      let code = number.key;
-      
- 
+   let stratagem = [];
+
+   const allowedKeys = ['w', 'd', 's','a'];   
+
    
-      const Eagle500KG = ["w", "d", "s", "s", "s" ];
-      //make a loop in where every time it loops it adds a variable to the array
-      // This way it makes the array final and then pushes another variable to the end
-      //let code = number.key;
+   playerChoice = body.addEventListener('keydown', function(event) {
+      const code = event.key;
 
-
-      let stratagem = [];
       stratagem.push(code);
 
-      console.log(stratagem);
-      if (stratagem.toString() == Eagle500KG)
+      if (stratagem.toString() === Eagle500KG)
       {
          console.log('500kg dropped');
+      }
+       
+      if(!allowedKeys.includes(code))
+      {
+         stratagem = [];
+      }
+      else if(stratagem.length > 5)
+      {
+            stratagem = [];
       };
+
+      console.log(stratagem);
    });
-   
+
   
 
 };
