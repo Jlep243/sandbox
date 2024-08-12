@@ -76,12 +76,28 @@ function game()
    let playerChoice;
    
 
-   playerChoice = body.addEventListener('keydown', function(one){
-      if(one.key === "d"){
-         playerChoice = "rock";
-         console.log(playerChoice);
-      }
+   playerChoice = body.addEventListener('keydown', function(number){
+      let code = number.key;
+      
+ 
+   
+      const Eagle500KG = ["w", "d", "s", "s", "s" ];
+      //make a loop in where every time it loops it adds a variable to the array
+      // This way it makes the array final and then pushes another variable to the end
+      //let code = number.key;
+
+
+      let stratagem = [];
+      stratagem.push(code);
+
+      console.log(stratagem);
+      if (stratagem.toString() == Eagle500KG)
+      {
+         console.log('500kg dropped');
+      };
    });
+   
+  
 
 };
 
