@@ -4,7 +4,6 @@ def game():
          print("You approach the gates. A guard shouts 'State your business here!'")
     def Tavern():
          print("The smell of beer and sounds of music, people talking fills the air!")
-
     def cathedral():
             print("you walk into the cathedral and hear the sounds of music. A chant. The words are foreign but sound peaceful.\n")
 
