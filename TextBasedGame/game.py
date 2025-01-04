@@ -2,8 +2,14 @@
 def game():
     def Manor():
          print("You approach the gates. A guard shouts 'State your business here!'")
+
     def Tavern():
          print("The smell of beer and sounds of music, people talking fills the air!")
+         print("A man far off into the corner tries to catch your attetion")
+         choice = input("Do you approach this man? Type 'y' for yest 'n' for no")
+         if choice == 'y':
+              print("you approach the man")
+
     def cathedral():
             print("you walk into the cathedral and hear the sounds of music. A chant. The words are foreign but sound peaceful.\n")
 
