@@ -9,6 +9,23 @@ def game():
          choice = input("Do you approach this man? Type 'y' for yest 'n' for no")
          if choice == 'y':
               print("you approach the man")
+              print("Are you looking for work?")
+              print("By the looks of you, you washed up ashore")
+              print("I happen to have an opportunity for you. What do you say?")
+              choice1 = input("1.Yes, 2. no, 3. Depends")
+              if choice1 =="yes":
+                   print("A man that doesn't ask questions. I like that.")
+              elif choice1 == "No":
+                   print("well then suite yourself")
+                   return
+              elif choice1 == "Depends":
+                   print("I guess its only fair. Well I have a job that needs a particular set of skills")
+                   print("This job requires somebody ending up dead and I think you fit the role")
+                   print("you tense up a bit")
+                   print("well of course I don't mean you")
+                   print("we'll provide any weapon of your choosing")
+             #add in dialog and make it to where you can choose weapon and loops the tavern function somehow with out
+             #Except on the second time he no longer is there.
 
     def cathedral():
             print("you walk into the cathedral and hear the sounds of music. A chant. The words are foreign but sound peaceful.\n")
