@@ -1,0 +1,13 @@
+#Dictionaries are a what is called a {key:value} pairs
+#   They are ordered and changeable. No duplicates.
+
+#example
+capitals = {"USA": "Washington D.C.",
+            "India": "New Delhi",
+            "China": "Beijing",
+            "Russia": "Moscow"}
+
+# print(dir(capitals))
+# print(help(capitals))
+
+print(capitals.get("India")) #This would get us new delhi
