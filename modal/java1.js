@@ -44,9 +44,7 @@ function game() {
    rock.style.alignItems = 'center';
    rock.style.backgroundColor = "#1b1b1b";
    rock.style.color = "white";
-   rock.style.width = "200px";
-   rock.style.height = "100px";
-   rock.style.border = '2px';
+   rock.style.width = "10%";
 
    let paper = document.createElement('p');
    choices.appendChild(paper);
@@ -56,9 +54,9 @@ function game() {
    paper.textContent = "Paper";
    paper.style.backgroundColor = "white";
    paper.style.color = "black";
-   paper.style.width = "200px";
+   paper.style.width = "10%";
    paper.style.height = "100px";
-   paper.style.border = '2px';
+  
 
    let scissors = document.createElement('p');
    choices.appendChild(scissors);
@@ -68,8 +66,9 @@ function game() {
    scissors.textContent = "Scissors";
    scissors.style.backgroundColor = "grey";
    scissors.style.color = "white";
-   scissors.style.width = "200px";
+   scissors.style.width = "10%";
    scissors.style.height = "100px";
+<<<<<<< HEAD
    scissors.style.border = "2px";
 
    let playerChoice;
@@ -84,11 +83,46 @@ function game() {
       stratagem.push(code);
 
       if (stratagem === Eagle500KG) {
+=======
+   
+
+   let playerChoice;
+   
+   const Eagle500KG = ["w", "d", "s", "s", "s" ];
+
+   let stratagem = [];
+
+   const allowedKeys = ['w', 'd', 's','a'];   
+
+   
+   playerChoice = body.addEventListener('keydown', function(event) {
+      const code = event.key;
+
+      stratagem.push(code);
+
+      if (stratagem.toString() === Eagle500KG)
+      {
+>>>>>>> e23fe328d1cd823a6ed579b7bd03347fa70cd70c
          console.log('500kg dropped');
+      }
+       
+      if(!allowedKeys.includes(code))
+      {
+         stratagem = [];
+      }
+      else if(stratagem.length > 5)
+      {
+            stratagem = [];
       };
+
+      console.log(stratagem);
    });
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e23fe328d1cd823a6ed579b7bd03347fa70cd70c
 
 };
 
