@@ -1,6 +1,5 @@
 
-function game()
-{
+function game() {
    let container = document.createElement('div');
    container.classList.add("heading");
    body.appendChild(container);
@@ -32,7 +31,7 @@ function game()
    computerScore.appendChild(cscore);
    cscore.style.marginTop = "0px";
    cscore.style.marginBottom = "0px";
- 
+
    let choices = document.createElement('div');
    body.appendChild(choices);
    choices.classList.add('choices');
@@ -71,33 +70,25 @@ function game()
    scissors.style.color = "white";
    scissors.style.width = "200px";
    scissors.style.height = "100px";
-   scissors.style.border = "2px"; 
+   scissors.style.border = "2px";
 
    let playerChoice;
-   
 
-   playerChoice = body.addEventListener('keydown', function(number){
+   const Eagle500KG = ["w", "d", "s", "s", "s"];
+
+   let stratagem = [];
+
+   playerChoice = body.addEventListener('keydown', function (number) {
       let code = number.key;
-      
- 
-   
-      const Eagle500KG = ["w", "d", "s", "s", "s" ];
-      //make a loop in where every time it loops it adds a variable to the array
-      // This way it makes the array final and then pushes another variable to the end
-      //let code = number.key;
 
-
-      let stratagem = [];
       stratagem.push(code);
 
-      console.log(stratagem);
-      if (stratagem.toString() == Eagle500KG)
-      {
+      if (stratagem === Eagle500KG) {
          console.log('500kg dropped');
       };
    });
-   
-  
+
+
 
 };
 
