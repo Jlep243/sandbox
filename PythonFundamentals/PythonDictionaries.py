@@ -14,5 +14,10 @@ print(capitals["India"]) #This would get us new delhi because dictionaries are i
 
 # Wipe an existing dictionary
 
-capitals = {} #This would rewrite the dictionary
+# capitals = {} #This would rewrite the dictionary
+# print(capitals)
+
+#we could also edit a keys value from the dictionary like so
+
+capitals["China"] = "nanjing"
 print(capitals)
