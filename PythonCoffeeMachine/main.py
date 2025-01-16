@@ -37,6 +37,7 @@ def resource(choice_lower):
     coffee = resources["coffee"]
 
     #calculates resources
+
     available_water = water - water_needed
     available_milk = milk - milk_needed
     available_coffee = coffee - coffee_needed
@@ -46,7 +47,7 @@ def resource(choice_lower):
     resources["coffee"] = available_coffee
 
 #Loops the function to select coffee
-while resources["water"] > 0:
+while 0 != 1:
 #function for picking coffee
     def coffee_choices():
         choice = input("Select a coffee: Espresso|Latte|Cappuccino \n")
@@ -54,11 +55,18 @@ while resources["water"] > 0:
 
         #If the choice is report it will return the resources of the machine that are available
         if choice_lower == 'report':
-            print(f"water:{resources["water"]}")
-            print(f"milk: {resources["milk"]}")
-            print(f"coffee: {resources["coffee"]}")
+            print(f"water:{resources["water"]}ml")
+            print(f"milk: {resources["milk"]}ml")
+            print(f"coffee: {resources["coffee"]}g")
         #if the choice is a type of coffee it will then charge
-        elif choice_lower in {"espresso","latte","cappuccino"}:
-            transaction(choice_lower)
+        # elif choice_lower in {"espresso","latte","cappuccino"}:
+        #     transaction(choice_lower)
+        # elif resources["water"] <= 0 or resources["milk"] <= 0 or resources["coffee"] <= 0:
+        #     print(f"Sorry, there isn't enough")
+# if resources["milk"] == 0:
+#     print(f"Sorry there isn't enough {resources["milk"]}")
+# if resources["coffee"] == 0:
+#     print(f"sorry the isn't enough {resources["coffee"]}")
 
-    coffee_choices()
+
+coffee_choices()
