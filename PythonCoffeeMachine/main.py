@@ -13,11 +13,12 @@ def transaction(choice_lower):
     nickels = input("how many nickels?") 
     pennies = input("how many pennies?") 
     coffee_type = choice_lower
+    #Goes to resources function before checking the money
+    resource(coffee_type)
     #checks for the right amount of money and gives change
     total = int(quarters)*0.25 + int(dimes)*0.10 + int(nickels)*0.05 + int(pennies)*0.01
     if total == MENU[choice_lower]["cost"] or total > MENU[choice_lower]["cost"]:
         change = total - MENU[choice_lower]["cost"]
-        resource(coffee_type)
         print(f"Here is your change: ${change}")
         print("Enjoy your drink")
     elif total != MENU[choice_lower]["cost"]:
@@ -48,11 +49,14 @@ def resource(choice_lower):
     resources["coffee"] = available_coffee
     if resources["milk"] <= 0:
             print(f"Sorry there isn't enough milk")
+            coffee_choices()
     elif resources["coffee"] <= 0:
             print(f"sorry the isn't enough coffee")
+            coffee_choices()
     elif resources["water"] <= 0:
             print(f"Sorry there isn't enough water")
-            
+            coffee_choices()
+
 #Loops the function to select coffee
 
 #function for picking coffee
@@ -70,13 +74,8 @@ def coffee_choices():
     #if the choice is a type of coffee it will then charge
         elif choice_lower in {"espresso","latte","cappuccino"}:
             transaction(choice_lower)
-        
-        if resources["milk"] < 0:
-            print(f"Sorry there isn't enough milk")
-        elif resources["coffee"] < 0:
-            print(f"sorry the isn't enough coffee")
-        elif resources["water"] < 0:
-            print(f"Sorry there isn't enough water")
+        elif choice_lower == 'off':
+             break
 
 
 coffee_choices()
