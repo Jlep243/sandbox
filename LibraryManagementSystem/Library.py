@@ -18,13 +18,38 @@ class Library:
         print(f"welcome to the library")
         options = input("1.Search for book, 2.Put book on hold, 3.Borrow book, 4.Return book: ")
         if options == "1":
-            author_or_title = input("would you like to search by author or title?")
-            search_for_book(author_or_title)
+            author_or_title = input("would you like to search by author or title? ")
+            Library.search_for_book(author_or_title)
         # elif options == "2":
             
         # elif options == "3":
 
-    # def search_for_book(author_or_title):
-    #     for i in range(len(books)):
-    
-
+    def search_for_book(author_or_title):
+        if author_or_title == "title":
+            title = input("search for title: ")
+            books_found = []
+            for i in range(len(books)):
+                book_title = books[i]["title"]
+                book_author = books[i]["author"]
+                if title == book_title:
+                    books_found.append(f"Title: {book_title}, Author: {book_author}")
+                    print(books_found)
+                    
+        
+        # elif author_or_title == "author":
+        #     author = input("search for author: ")
+        #     books_found = []
+        #     for i in range(len(books)):
+        #         book_author = books[i]["author"]
+        #     if author.lower() == book_author.lower():
+        #         books_found.append(book_author)
+        #         print(f"books_found")
+        # Library.library_options(key=True,username="jack")
+                # book_title[i]["title"]["author"],book_title[i]["title"]["is_borrowed"]
+                # if book_title.lower() == title.lower():
+                #     books_found= []
+                #     books_found.append(book_title[i]["title"])
+                #     print(books_found)
+                #     Library.library_options(key=True,username="jack")
+                # elif title == "stop":
+                #     Library.library_options(key=True,username="jack")
