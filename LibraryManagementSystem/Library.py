@@ -11,13 +11,20 @@ books = [
     {"title": "The Hobbit", "author": "Isaac Asimov", "is_borrowed": False}
 ]
 
+
+
 class Library:
-    def Library_options():
-        print("welcome to the library")
-        options = input("search for a book, borrow a boow")
-        if options == "search for boook":
+    def library_options(key,username):
+        print(f"welcome to the library")
+        options = input("1.Search for book, 2.Put book on hold, 3.Borrow book, 4.Return book: ")
+        if options == "1":
             author_or_title = input("would you like to search by author or title?")
+            search_for_book(author_or_title)
+        # elif options == "2":
             
+        # elif options == "3":
 
-
+    # def search_for_book(author_or_title):
+    #     for i in range(len(books)):
+    
 
