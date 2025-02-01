@@ -31,9 +31,16 @@ class Library:
             for i in range(len(books)):
                 book_title = books[i]["title"]
                 book_author = books[i]["author"]
-                if title == book_title:
-                    books_found.append(f"Title: {book_title}, Author: {book_author}")
-                    print(books_found)
+                
+                if title.lower() == book_title.lower():
+                    books_found.append({book_title},{book_author})
+    
+            Library.library_options(key=True,username="jack")
+        # elif author_or_title == "author":
+        #     author = input("search by author: ")
+        #     books_found=[]
+        #     book
+
                     
         
         # elif author_or_title == "author":
