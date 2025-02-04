@@ -27,15 +27,25 @@ class Library:
     def search_for_book(author_or_title):
         if author_or_title == "title":
             title = input("search for title: ")
+            print("   ")
             books_found = []
+            a = 0
             for i in range(len(books)):
                 book_title = books[i]["title"]
                 book_author = books[i]["author"]
-                
                 if title.lower() == book_title.lower():
-                    books_found.append({book_title},{book_author})
-    
-            Library.library_options(key=True,username="jack")
+                    books_found.append(book_title)
+                    books_found.append(book_author)
+            for book in books_found:
+                a += 1
+                if a % 2 != 0:
+                    print(f"Title:{book}")
+                elif a % 2 == 0:
+                    print(f"Author:{book} \n")
+                    
+                
+
+        Library.library_options(key=True,username="jack")
         # elif author_or_title == "author":
         #     author = input("search by author: ")
         #     books_found=[]
