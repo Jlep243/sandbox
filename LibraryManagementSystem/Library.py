@@ -30,6 +30,7 @@ class Library:
             print("   ")
             books_found = []
             a = 0
+            b = 0
             for i in range(len(books)):
                 book_title = books[i]["title"]
                 book_author = books[i]["author"]
@@ -38,35 +39,29 @@ class Library:
                     books_found.append(book_author)
             for book in books_found:
                 a += 1
+                b += 1
                 if a % 2 != 0:
                     print(f"Title:{book}")
                 elif a % 2 == 0:
                     print(f"Author:{book} \n")
-                    
-                
+            Library.library_options(key=True,username="jack")
 
-        Library.library_options(key=True,username="jack")
-        # elif author_or_title == "author":
-        #     author = input("search by author: ")
-        #     books_found=[]
-        #     book
-
-                    
+        elif author_or_title == "author":
+            author = input("search by author: ")
+            books_found=[]
+            a = 0
+            for i in range(len(books)):
+                book_title = books[i]["title"]
+                book_author = books[i]["author"]
+                if author.lower() == book_author.lower():
+                    books_found.append(book_title)
+                    books_found.append(book_author)
+            for book in books_found:
+                a += 1
+                if a % 2 != 0:
+                    print(f"Title:{book}")
+                elif a % 2 == 0:
+                    print(f"Author:{book} \n")
+            Library.library_options(key=True,username="jack")
         
-        # elif author_or_title == "author":
-        #     author = input("search for author: ")
-        #     books_found = []
-        #     for i in range(len(books)):
-        #         book_author = books[i]["author"]
-        #     if author.lower() == book_author.lower():
-        #         books_found.append(book_author)
-        #         print(f"books_found")
-        # Library.library_options(key=True,username="jack")
-                # book_title[i]["title"]["author"],book_title[i]["title"]["is_borrowed"]
-                # if book_title.lower() == title.lower():
-                #     books_found= []
-                #     books_found.append(book_title[i]["title"])
-                #     print(books_found)
-                #     Library.library_options(key=True,username="jack")
-                # elif title == "stop":
-                #     Library.library_options(key=True,username="jack")
+        
