@@ -13,8 +13,8 @@ def login(username, password):
             key = True
             Library.library_options(key,username)
             break
-        else:
-            print("This user does not exist")
+    else:
+        print("This user does not exist")
 
 while True: 
     choice = input("Would you like to login or register? ")
@@ -29,5 +29,5 @@ while True:
         password = input("create password: ")
         registered = Members(username, password)
 
-        accounts.append({"username" : registered.user, "password" : registered.password})
+        accounts.append({"user" : registered.user, "password" : registered.password})
         print(f"welcome {registered.user}, please login\n")
