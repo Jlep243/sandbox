@@ -1,14 +1,14 @@
 books = [
-    {"title": "1984", "author": "Jane Austen", "is_borrowed": False},
-    {"title": "Foundation", "author": "Jane Austen", "is_borrowed": False},
-    {"title": "1984", "author": "George Orwell", "is_borrowed": False},
-    {"title": "Pride and Prejudice", "author": "Agatha Christie", "is_borrowed": False},
-    {"title": "Pride and Prejudice", "author": "Jane Austen", "is_borrowed": False},
-    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "is_borrowed": False},
-    {"title": "Murder on the Orient Express", "author": "J.K. Rowling", "is_borrowed": False},
-    {"title": "1984", "author": "Jane Austen", "is_borrowed": False},
-    {"title": "Foundation", "author": "J.R.R. Tolkien", "is_borrowed": False},
-    {"title": "The Hobbit", "author": "Isaac Asimov", "is_borrowed": False}
+    {"title": "1984", "author": "Jane Austen", "is_borrowed": False,"on_hold": False},
+    {"title": "Foundation", "author": "Jane Austen", "is_borrowed": False,"on_hold": False},
+    {"title": "1984", "author": "George Orwell", "is_borrowed": False,"on_hold": False},
+    {"title": "Pride and Prejudice", "author": "Agatha Christie", "is_borrowed": False,"on_hold": False},
+    {"title": "Pride and Prejudice", "author": "Jane Austen", "is_borrowed": False,"on_hold": False},
+    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "is_borrowed": False, "on_hold": False},
+    {"title": "Murder on the Orient Express", "author": "J.K. Rowling", "is_borrowed": False, "on_hold": False},
+    {"title": "1984", "author": "Jane Austen", "is_borrowed": False, "on_hold": False},
+    {"title": "Foundation", "author": "J.R.R. Tolkien", "is_borrowed": False, "on_hold": False},
+    {"title": "The Hobbit", "author": "Isaac Asimov", "is_borrowed": False, "on_hold": False}
 ]
 
 
@@ -22,8 +22,8 @@ class Library:
             Library.search_for_book(author_or_title)
 
         # put books on hold
-        # elif options == "2":
-        
+        elif options == "2":
+            Library.put_on_hold()
         # borrow book
         # elif options == "3":
         
@@ -78,4 +78,24 @@ class Library:
         for book in books:
             print(f"Title: {book["title"]}, Author: {book["author"]}, CheckedOut: {book["is_borrowed"]}")
         print("\n")
+        Library.library_options(key=True,username="jack")
+
+    def put_on_hold():
+        print("\n")
+        book = input("What book would you like to put on hold: ")
+        author = input("who is the author: ")
+        book_found = []
+        print("\n")
+        #This goes through the list of dictionaries of each book
+        for title in books:
+
+            #This should in theory be able to detect which book is going to be put on hold
+            if book.lower() == title["title"] and author.lower() == title["author"]:  
+                #both of these append the book by title and author
+                book_found.append(title[f"{book}"])
+                book_found.append(title[f"{author}"])
+
+                #This should change the on_hold variable to True
+                title["on_hold"] = True
+                # print(f"{title['title']} by {title["author"]} is now on hold")
         Library.library_options(key=True,username="jack")
