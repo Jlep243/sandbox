@@ -83,19 +83,17 @@ class Library:
     def put_on_hold():
         print("\n")
         book = input("What book would you like to put on hold: ")
-        author = input("who is the author: ")
+        author = input("Who is the author of the book: ")
+
+        # author = input("who is the author: ")
         book_found = []
         print("\n")
+
         #This goes through the list of dictionaries of each book
         for title in books:
-
-            #This should in theory be able to detect which book is going to be put on hold
-            if book.lower() == title["title"] and author.lower() == title["author"]:  
-                #both of these append the book by title and author
-                book_found.append(title[f"{book}"])
-                book_found.append(title[f"{author}"])
-
-                #This should change the on_hold variable to True
-                title["on_hold"] = True
-                # print(f"{title['title']} by {title["author"]} is now on hold")
+            
+            if title['title'].lower() == book.lower() and title['author'].lower() == author:
+                title['on_hold'] = False
+                print(f"{title["title"]} by {title["author"]} is now on hold")
+        print('\n')
         Library.library_options(key=True,username="jack")
