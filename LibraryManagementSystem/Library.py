@@ -91,9 +91,12 @@ class Library:
 
         #This goes through the list of dictionaries of each book
         for title in books:
-            
-            if title['title'].lower() == book.lower() and title['author'].lower() == author:
-                title['on_hold'] = False
+        #books are now able to be put on hold. We need to make it to where if a book is
+        #already on hold we can't put it on hold
+            if title['title'].lower() == book.lower() and title['author'].lower() == author and title["on_hold"] == False:
+                title['on_hold'] = True
                 print(f"{title["title"]} by {title["author"]} is now on hold")
+            elif title['on_hold'] == True:
+                print('Sorry, but that book is put on hold')
         print('\n')
         Library.library_options(key=True,username="jack")
