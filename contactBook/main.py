@@ -5,5 +5,5 @@ if option == "1":
     print("hello world")
 elif option == "2":
     for contact in contacts:
-        print(f"{contact["name"]}| email: {contact["email"]}|")
+        print(f"\n{contact["name"]}|\n phone:{contact["phone"]}|\n email: {contact["email"]}")
 
