@@ -6,13 +6,12 @@ if option == "1":
     identifier = input(f"{lookupOption}: ")
     for contact in contacts:
         if contact[lookupOption] == identifier:
-            print(contact)
-		 
+            print(f"\n name: {contact["name"]}| phone: {contact["phone"]}| email: {contact["email"]}| address: {contact["address"]}")	 
 elif option== "2":
     for contact in contacts:
         print(f"\n{contact["name"]}|\n phone:{contact["phone"]}|\n email: {contact["email"]}")
 if option == "3":
- 	person = input("which contact would you like to update:")
+	person = input("which contact would you like to update:")
 
 #for contact in contacts:
 #    print(contact["name"])
