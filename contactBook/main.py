@@ -16,8 +16,18 @@ while True:
             print(f"\n{contact["name"]}|\n phone:{contact["phone"]}|\n email: {contact["email"]}")
 
     elif option == "3":
-        person = input("which contact would you like to update:")
-
+        person = input("which contact would you like to update: ")
+        for contact in contacts:
+            if contact["name"] == person:
+                print(f"{contact}")
+  
+                #answer = input("Is this the right person?(Y/n): ")
+            #if answer == "Y":
+                #identifier_type = input("what would you like to edit? (name|phone|email|address): ")
+                #identifier = input(f"what is the {identifier_type}")
+                #for contact in contacts:
+                    #if contact[identifier_type]: 
+                        #print("ya'know") 
     elif option == "4":
         name = input(" name: ")
         phone = input(" phone: ")
