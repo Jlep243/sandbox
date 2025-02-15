@@ -9,8 +9,7 @@ while True:
         identifier = input(f"{lookupOption}: ")
         for contact in contacts:
             if contact[lookupOption] == identifier:
-                print(f"\n name: {contact["name"]}| phone: {contact["phone"]}| email: {contact["email"]}| address: {contact["address"]}")
-            
+                print(f"\n name: {contact["name"]}| phone: {contact["phone"]}| email: {contact["email"]}| address: {contact["address"]}") 
 
     elif option== "2":
         for contact in contacts:
