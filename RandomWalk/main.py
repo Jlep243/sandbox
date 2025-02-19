@@ -1,21 +1,32 @@
 import random
-from turtle import *
+import turtle as t
 
-tim = Turtle()
+tim = t.Turtle()
 
-def random_walk():
-    tim.pensize(10)
-    tim.color("blue")
-    tim.forward(1000000)
+colors = ["blue","red","green","yellow","orange"]
+directions = [90,0,180,270]
+distance = range(1,100)
+t.colormode(255)
 
-def square():
-    tim.pensize(100)
-    tim.color("red")
-    for _ in range(4):
-        tim.forward(100)
-        tim.right(90)
+def rand_colors():
+    r = random.randint(0,250)
+    g = random.randint(0,250)
+    b = random.randint(0,250)
+    random_color = (r,g,b)
+    return random_color
 
-#random_walk()
-square()
+def random_walk(num):
+
+    for _ in range(num):
+        rand_direction = random.choice(directions)
+        tim.speed('fastest')
+        tim.pensize(random.choice(directions))
+        tim.color(rand_colors())
+        tim.setheading(rand_direction) 
+        tim.forward(30)
+ 
+random_walk(1000)
+
+
 screen = Screen()
 screen.exitonclick()

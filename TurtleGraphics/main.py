@@ -26,6 +26,7 @@ def shapes(start,end):
         degrees = 360/num_sides
         rand_color = list_of_colors[random.randint(0,3)]
         for _ in range(num_sides):
+            tim.speed('fastest')
             tim.color(rand_color)
             tim.forward(200)
             tim.right(degrees)
