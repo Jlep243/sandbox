@@ -20,7 +20,7 @@ def random_walk(num):
     for _ in range(num):
         rand_direction = random.choice(directions)
         tim.speed('fastest')
-        tim.pensize(random.choice(directions))
+        tim.pensize(13)
         tim.color(rand_colors())
         tim.setheading(rand_direction) 
         tim.forward(30)
