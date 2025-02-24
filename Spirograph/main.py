@@ -35,7 +35,7 @@ def draw_spirograph(size_of_gap):
         current_heading = t.heading()
         t.setheading(current_heading + size_of_gap)
 
-draw_spirograph(5)
+draw_spirograph(4)
 
 t.exitonclick()
 
