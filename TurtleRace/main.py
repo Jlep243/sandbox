@@ -11,21 +11,21 @@ tommy = t.Turtle()
 
 racers = [tim,tom,timmy,tommy]
 
-def rand_color():
-    colors = ["red","blue","black","yellow","pink","purple"]
-    for color in colors:
-        return color
+colors = ["red","light blue","black","yellow","pink","purple"]
+number_of_colors = 5
 
+def rand_color():
+    random_color = colors[random.randint(0,5)]
+    return random_color
 
 def racemode():
     i = 0
     for racer in racers:
+        racer.shape('turtle')
         racer.penup()
-        color = rand_color()
         i+=50
         racer.setpos(0,i)
-        racer.color(color) 
-
+        racer.color(rand_color()) 
 
 racemode()
 
