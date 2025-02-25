@@ -31,7 +31,7 @@ def racesetup():
         racer.setpos(0,i)
 
 def racestart():
-    win.textinput("Place your bets!",f" Which turtle do you think will win? \n Tim: {tim.color()[0]}, Tom: {tom.color()[1]}, Timmy: {timmy.color()[0]}, Tommy: {tommy.color()[0]}")
+    win.textinput("Place your bets!",f" Which turtle do you think will win? \n Tim: {tim.pencolor()}, Tom: {tom.pencolor()}, Timmy: {timmy.pencolor()}, Tommy: {tommy.pencolor()}")
     for racer in racers:
         racer.forward(random.choice(speed))
 
