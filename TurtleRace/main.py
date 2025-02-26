@@ -1,5 +1,6 @@
 import turtle as t
 import random
+from tkinter import messagebox
 
 win =t.Screen()
 t.bgcolor("light blue")
@@ -12,10 +13,6 @@ tom = t.Turtle()
 timmy = t.Turtle()
 tommy = t.Turtle()
 
-tommy.name = "Tommy"
-tom.name = "Tom"
-timmy.name = "Timmy"
-tim.name = "Tim"
 
 racers = [tim,tom,timmy,tommy]
 speed = [5,10,15,20,25,30,35]
@@ -47,13 +44,13 @@ def racestart():
             if racer.xcor() > 250:
                 winner = racer.pencolor()
                 if bets == winner:
-                    print(f"The winner is {winner} and you win!")
+                    messagebox.showinfo("Winner is!",f"The winner is {winner} and you win!")
                     return
                 elif bets != winner:
-                    print(f"The winner is {winner} and you lose!")
+                    messagebox.showinfo("Winner is!",f"The winner is {winner} and you lose!") 
                     return
             racer.forward(random.choice(speed))
 
 racesetup()
 racestart()
-t.mainloop() 
+t.mainloop()
