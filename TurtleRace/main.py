@@ -5,10 +5,17 @@ win =t.Screen()
 t.bgcolor("light blue")
 win.screensize(100,100)
 
+
+
 tim = t.Turtle()
 tom = t.Turtle()
 timmy = t.Turtle()
 tommy = t.Turtle()
+
+tommy.name = "Tommy"
+tom.name = "Tom"
+timmy.name = "Timmy"
+tim.name = "Tim"
 
 racers = [tim,tom,timmy,tommy]
 speed = [5,10,15,20,25,30,35]
@@ -29,14 +36,24 @@ def racesetup():
         racer.shape('turtle')
         racer.penup()
         i+=50
-        racer.setpos(0,i)
+        racer.setpos(-200,i)
 
 def racestart():
-    bets = win.textinput("Place your bets!",f" Which turtle do you think will win? \n Tim: {tim.pencolor()}, Tom: {tom.pencolor()}, Timmy: {timmy.pencolor()}, Tommy: {tommy.pencolor()}")
-    while tim.ycor()!=100 or tom.ycor()!=100 or tommy.ycor()!=100 or timmy.ycor()!=100:
+    race = True
+    bets = win.textinput("Place your bets!",f" Which turtle do you think will win? \n {tim.pencolor()},{tom.pencolor()}, {timmy.pencolor()},{tommy.pencolor()}")
+    while race:
         for racer in racers:
-            racer.forward(random.choice(speed)) 
-            return racer
+            print(racer.pos())
+            if racer.xcor() > 250:
+                winner = racer.pencolor()
+                if bets == winner:
+                    print(f"The winner is {winner} and you win!")
+                    return
+                elif bets != winner:
+                    print(f"The winner is {winner} and you lose!")
+                    return
+            racer.forward(random.choice(speed))
+
 racesetup()
 racestart()
 t.mainloop() 
