@@ -14,7 +14,7 @@ import random
 
 tim = Turtle()
 tim.penup()
-tim.goto(-140,200)
+tim.goto(-40,20)
 tim.pendown()
 
 list_of_colors = ["FireBrick","MediumPurple","Orange2","DeepSkyBlue2"]
@@ -28,13 +28,13 @@ def shapes(start,end):
         for _ in range(num_sides):
             tim.speed('fastest')
             tim.color(rand_color)
-            tim.forward(200)
+            tim.forward(20)
             tim.right(degrees)
     print("done!") 
 
-shapes(1,1000)
+shapes(1,10)
  
 
 screen = Screen()
-screen.exitonclick()
+screen.mainloop()
 
