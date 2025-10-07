@@ -1,8 +1,9 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-x = np.linspace(0,2,100)
-fig, ax = plt.subplots(figsize=(2,1),facecolor='lightblue', layout='constrained')
+X = np.linspace(0, 10*np.pi, 1000)
+Y = np.sin(X)
 
-
+fig, ax = plt.subplots()
+ax.plot(X,Y)
 plt.show()
